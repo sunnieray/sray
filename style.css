@@ -1,0 +1,264 @@
+:root {
+    --primary: pink;
+    --secondary: #4ECACC;
+    --highlight: #7AFFB6;
+    --accent: #FFA9BA;
+    --neutral: #879999;
+}
+
+body {
+    background-color: var(--neutral);
+    font-size: 20px;
+    font-family: 'Mansalva', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    text-align: center;
+}
+
+/* decorative section */
+.hero {
+    background: url(https://live.staticflickr.com/4042/34923045104_7388e6d074_b.jpg);
+    height: 20vh;
+    /* background-size: cover will stretch the image to fit the resolution, 
+    background-size: contain will not crop the image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer a,
+nav a,
+.hero a,
+{
+  /* Remove underline. */
+  text-decoration: none;
+}
+
+.fas {
+    font-size: 2.4em;
+  }
+  
+  nav .fas {
+    margin: 0.8rem;
+    position: absolute;
+    transform: translateX(calc(100vw - 4.8rem));
+  }
+
+/* these style the link on the decorative hero section */
+.btn {
+    background-color: var(--accent); 
+    text-decoration: none;
+    padding: 0.5rem;
+    color: var(--neutral);
+    border-radius: 10%;
+}
+
+h3 {
+    color: var(--secondary);
+}
+
+img {
+  border-radius: 50%;
+  border: solid pink;
+}
+
+p {
+    font-family: 'Turret Road', cursive;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+}
+
+/* this resizes and positions the hamburger icon for mobile view navigation expansion */
+nav .fas {
+    font-size: 1.8em; /* 48px - Gives a nice 'clickable' target as per: https://material.io/design/layout/spacing-methods.html#touch-targets */
+    position: absolute;
+    transform: translateX(90px);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    max-height: 30px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    padding: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul {
+    text-align: center;
+  }
+  
+  nav li {
+    padding: 0.6rem;
+  }
+  
+  nav,
+  section:nth-of-type(even) {
+    color: var(--secondary-text);
+  }
+  
+  nav {
+    border-top: var(--border-secondary);
+    border-bottom: var(--border-secondary);
+    min-height: .8rem;
+  }
+
+#blogDiv {
+    font-family: 'Questrial', sans-serif;
+}
+
+.entryDiv {
+    border: 2px solid pink;
+    margin: 20px;
+    font-size: 12px;
+}
+
+.entryDetails {
+    font-size: 10px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 8px;
+}
+
+.fas:hover {
+    cursor: pointer;
+  }
+  
+  .is-hidden--mobile {
+    font-size: 0;
+    height: 0;
+  }
+
+@media screen and (min-width: 768px) {
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .read-more-btn {
+      align-self: center;
+      max-width: 30.25rem;
+      text-align: center;
+    }
+  
+    .hero {
+      height: 40vh;
+    }
+  
+    .flex-container--tablet {
+      display: flex;
+    }
+  
+    .flex-row--tablet {
+      flex-direction: row;
+    }
+  
+    .form--contact,
+    .form--contact .flex-container--tablet {
+      max-width: 960px;
+    }
+  
+    .form--contact .flex-container--tablet {
+      width: 80vw;
+    }
+  
+    .form--contact .flex-container--tablet div {
+      margin: 0 0.8rem;
+  
+      /* 1/3 of total PARENT width. */
+      width: 33%;
+    }
+  
+    .form--contact .flex-container--tablet div:first-child {
+      margin-left: 0;
+    }
+  
+    .form--contact .flex-container--tablet div:last-child {
+      margin-right: 0;
+    }
+  
+    textarea {
+      max-width: 700px;
+    }
+  
+    .is-hidden--tablet {
+      font-size: 0;
+      height: 0;
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+    header {
+      flex-direction: row;
+      padding: 1.6rem;
+    }
+  
+    header figure {
+      margin-right: 1.6rem;
+    }
+  
+    nav {
+      min-height: 5.8rem;
+    }
+  
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    section {
+      padding-bottom: 3px;
+    }
+  
+    section p {
+      margin-bottom: auto;
+    }
+  
+    .hero {
+      height: 60vh;
+    } 
+  
+    .flex-container--desktop {
+      display: flex;
+    }
+  
+    .flex-row--desktop {
+      flex-direction: row;
+    }
+  
+    .is-hidden--desktop {
+      font-size: 0;
+      height: 0;
+      display: none;
+    }
+  
+    .is-shown--desktop {
+      font-size: initial;
+    }
+}
